@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zomato Dining Out</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+  <div class="container py-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="fw-bold text-danger">zomato</h3>
+      <div class="input-group w-50">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-geo-alt-fill text-danger"></i></span>
+        <input type="text" class="form-control border-start-0 border-end-0" placeholder="Nagpur Junction, Nagpur">
+        <input type="text" class="form-control" placeholder="Search for restaurant, cuisine or a dish">
+      </div>
+      <div>
+        <a href="#" class="me-3 text-decoration-none text-dark">Log in</a>
+        <a href="#" class="text-decoration-none text-dark">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="container border-bottom mb-4">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active text-danger border-danger border-bottom border-2" href="#"><i
+            class="bi bi-shop me-2"></i>Dining Out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="bi bi-bicycle me-2"></i>Delivery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="bi bi-cup-straw me-2"></i>Nightlife</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Carousel -->
+  <div class="container my-5">
+    <div id="multiCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card rounded-3 overflow-hidden shadow-sm"
+                style="cursor: pointer; transition: transform 0.2s;">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/5/21167125/773fa06e644303b1458ca1cd50a714ec_featured_v2.jpg"
+                  class="card-img-top object-fit-cover" style="height: 200px;" alt="Serene Rooftop">
+                <div class="card-body">
+                  <h5 class="card-title">Serene Rooftop</h5>
+                  <p class="card-text">8 Places</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card rounded-3 overflow-hidden shadow-sm"
+                style="cursor: pointer; transition: transform 0.2s;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2q1pifaiVYQ8deWidRQ56xuQV-qujrhUDCQ&s"
+                  class="card-img-top object-fit-cover" style="height: 200px;" alt="Pan-Asian">
+                <div class="card-body">
+                  <h5 class="card-title">Pan-Asian</h5>
+                  <p class="card-text">7 Places</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card rounded-3 overflow-hidden shadow-sm"
+                style="cursor: pointer; transition: transform 0.2s;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpDUMCy5o2SkLUUdo7AEBxIux2fu_qLEF6Yw&s"
+                  class="card-img-top object-fit-cover" style="height: 200px;" alt="Romantic Dining">
+                <div class="card-body">
+                  <h5 class="card-title">Romantic Dining</h5>
+                  <p class="card-text">8 Places</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card rounded-3 overflow-hidden shadow-sm"
+                style="cursor: pointer; transition: transform 0.2s;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKoovFpxYytCNHNF7c45unUYu9Z5dFJd3gAA&s"
+                  class="card-img-top object-fit-cover" style="height: 200px;" alt="Desserts">
+                <div class="card-body">
+                  <h5 class="card-title">Bingeworthy Desserts</h5>
+                  <p class="card-text">10 Places</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#multiCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#multiCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 mt-4">
+        <button class="btn btn-outline-secondary btn-sm">Filters</button>
+        <button class="btn btn-outline-secondary btn-sm">Offers</button>
+        <button class="btn btn-outline-secondary btn-sm">Rating: 4.5+</button>
+        <button class="btn btn-outline-secondary btn-sm">Pet Friendly</button>
+        <button class="btn btn-outline-secondary btn-sm">Outdoor Seating</button>
+        <button class="btn btn-outline-secondary btn-sm">Serves Alcohol</button>
+        <button class="btn btn-outline-secondary btn-sm">Open Now</button>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="container mt-4">
+      <img src="https://b.zmtcdn.com/data/o2_assets/e067a1cf0d3fe27b366402b98b994e9f1716296909.png" class="img-fluid"
+        alt="Banner">
+    </div>
+
+    <!-- Best Food Section -->
+    <div class="container mt-4">
+      <h1>Best Food in Nagpur</h1>
+
+
+      <div class="container py-4">
+        <div class="row g-4">
+
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/9/20629939/d2159019a7af3af707f4d82251a8d02e_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Bellavista Cafe">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Bellavista Cafe & Skybar</h5>
+                <p class="mb-1 text-muted small">North Indian, Chinese, Continental</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹2,700 for two</span>
+                  <span class="badge bg-success">4.3★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Civil Lines, Nagpur</span>
+                  <span>1.4 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="raasta.jpeg" class="card-img-top rounded-top-4" alt="Raasta">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Raasta</h5>
+                <p class="mb-1 text-muted small">North Indian, Chinese, Italian</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,500 for two</span>
+                  <span class="badge bg-success">3.9★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>3.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/2/3301252/6745611429c2cec01c1d5b46403c7701_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Little Italy</h5>
+                <p class="mb-1 text-muted small">Italian, Pizza, Pasta, Continental</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Civil Lines, Nagpur</span>
+                  <span>2.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="taco.avif" class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">Flat
+                  10% OFF</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Taco Bell</h5>
+                <p class="mb-1 text-muted small">Fast Food Mexican</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹400 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dhantoli, Nagpur</span>
+                  <span>2.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/chains/5/18670815/aed0aa74c08828f8db3ab1a8b63dea21_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Airport Centre Point- Wardha
+                </h5>
+                <p class="mb-1 text-muted small">North Indian, Continental, Mughlai</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,500 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span> Wardha Road Nagpur</span>
+                  <span>6.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="tipsy.jpeg" class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Tipsy Turk</h5>
+                <p class="mb-1 text-muted small">Italian, Mughlai, Pasta, Middle E</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Sadar Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 7 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/2/21275972/27b8633ea011e30f59536abd94a4c05d_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Co.So Cocktails & Socials</h5>
+                <p class="mb-1 text-muted small">Asian, Continental, Moder</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹2,200 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Sadar Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 8 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/3/20985903/ce8ff880a3e3a27c7ec610355ff3c4f6_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">Flat
+                  10% OFF</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Farzi Cafe</h5>
+                <p class="mb-1 text-muted small">Bar Food, North Indian</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹3,000 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 9 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/7/21729087/27acced4558e78fea871d76315e5e612.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Skylite Lounge</h5>
+                <p class="mb-1 text-muted small">Asian, Chinese, Seafood</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,400 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Sitabuldi, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Card 10-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/reviews_photos/f0b/46267acb1b79d05dd961280f4cd99f0b_1665834440.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Yamazaki Pan Asian Cuisine</h5>
+                <p class="mb-1 text-muted small">Asian, Japanese, Thai, Korean, Burmese </p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.8★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>, Bajaj Nagar, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 11-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="https://b.zmtcdn.com/data/pictures/9/3301609/e1400a9dbffda10b39ba0565e43fefec_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Pablo - The Art Cafe' Lounge</h5>
+                <p class="mb-1 text-muted small">Pizza, Seafood, Beverages</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,800 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 12-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/5/21295185/233ff64b9187706c4c3c55a637eee509_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">The Salt- All Day Brew</h5>
+                <p class="mb-1 text-muted small">North Indian, Mexican, Chinese</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,800 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Civil Lines, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 13-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/7/18695587/846f567c2bc4359e78cdd4de8a1ae416_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Hotel Gulmohar</h5>
+                <p class="mb-1 text-muted small">North Indian, Chinese</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,000 for two</span>
+                  <span class="badge bg-success">3.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Manish Nagar, Nagpur</span>
+                  <span>7.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 14-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/8/20381938/5bce73f21a3f49cf45ae4ac5712c340a_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">Flat
+                  10% OFF</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Miitro Restro & Cafe</h5>
+                <p class="mb-1 text-muted small">North Indian, Sandwich</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,800 for two</span>
+                  <span class="badge bg-success">2.9★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Nandanvan, Nagpur</span>
+                  <span>3.9 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 15-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="https://b.zmtcdn.com/data/pictures/4/3300524/4fe2d402e3de1d5b00bef6560d60cd1a_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Chintu Family Dhaba</h5>
+                <p class="mb-1 text-muted small">North Indian, Chinese</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹400 for two</span>
+                  <span class="badge bg-success">3.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Mankapur, Nagpur</span>
+                  <span>6.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 16 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/9/21187339/e0944b7ffa9c3ba7df4809824559a61c_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Bellavista Cafe">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Momentt - Enrise By Sayaji
+                </h5>
+                <p class="mb-1 text-muted small">North Indian, Chinese, Continental</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,700 for two</span>
+                  <span class="badge bg-success">4.3★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span> Bajaj Nagar, Nagpur</span>
+                  <span>2.4 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 17 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/5/19309515/a140a3c19738e26372a7300fcd28626b_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Raasta">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Uptown 501</h5>
+                <p class="mb-1 text-muted small">North Indian</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.9★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>3.9 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 18 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/3/20742963/82f7f77567c814db03d7613d91c6d1fd_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">Flat
+                  25% OFF </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Ozone Restro And Lounge</h5>
+                <p class="mb-1 text-muted small">North Indian, Seafood, Chinese</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span> Dharampeth, Nagpur</span>
+                  <span>2.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 19 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/9/21517209/fc7ef596a05cd97e187d06a8a52c99ce_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Masato</h5>
+                <p class="mb-1 text-muted small"></p>
+
+                Japanese, Asian, Chinese, Korean, Sushi, Desserts
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1000 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dhantoli, Nagpur</span>
+                  <span>2.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 20 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/chains/5/18670815/aed0aa74c08828f8db3ab1a8b63dea21_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">ACP Express Restaurant By Airport Centre Point
+                </h5>
+                <p class="mb-1 text-muted small">North Indian, Biryani, Continental</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,500 for two</span>
+                  <span class="badge bg-success">4.3★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Kamptee Road, Sadar, Nagpur</span>
+                  <span>6.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 21 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/chains/1/3300061/e6b0ab5dcb0c946dd7970652c416ca42.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Mocha</h5>
+                <p class="mb-1 text-muted small">Continental, North Indian, Italian, Fast Food, Pizza, Pasta, Desserts,
+                  Beverages</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,000 for two</span>
+                  <span class="badge bg-success">4.1★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Card 22 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/3/19805783/0e6f78cd820e99b3cfb87405445df3ec_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end"></span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Bouffage</h5>
+                <p class="mb-1 text-muted small">North Indian, Continenta</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Sadar Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 23 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/3/20985903/ce8ff880a3e3a27c7ec610355ff3c4f6_featured_v2.jpg?output-format=webp"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span
+                  class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">Flat
+                  10% OFF</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Farzi Cafe</h5>
+                <p class="mb-1 text-muted small">Bar Food, North Indian</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹3,000 for two</span>
+                  <span class="badge bg-success">4.2★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Dharampeth, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 24 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/chains/6/3300056/5fa88ad53c61a576725fe8510c9f37d7_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Barbecue</h5>
+                <p class="mb-1 text-muted small">North Indian, Kebab, Chinen</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,400 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Sadar, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Card 25-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img src="https://b.zmtcdn.com/data/pictures/1/3300041/349b60dc9353e065338370e53502abca_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Ashoka Restaurant</h5>
+                <p class="mb-1 text-muted small">North Indian, Mughlai </p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.8★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Bajaj Nagar, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 26-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/8/20123158/263560a343a6ac17be9b2ba92ffce177_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Asian Bistro</h5>
+                <p class="mb-1 text-muted small"> Asian, Chinese, Sushi,</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹800 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Bajaj Nagar, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Card 27-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/7/19676387/7d05d6b64fbd73b609f9bb5335e03f67_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1"> Mustard Restro Lounge</h5>
+                <p class="mb-1 text-muted small">Fast Food, North Indian</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,500 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Civil Lines, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 28-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/chains/1/18742771/ba64bc3c5a3ab6ffd0d7d73eceb120d9.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Bhau Cha Dhakka</h5>
+                <p class="mb-1 text-muted small">Maharashtrian, North Indian, Mughlai</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,800 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Hingna T Point, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 29-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src="https://b.zmtcdn.com/data/pictures/9/21006109/9bbb00d9a9b88517762b4331bd4ad353_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">ETC Dine Inn</h5>
+                <p class="mb-1 text-muted small">North Indian, Mexican, Chinese</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹1,200 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Kamptee Locality, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 30-->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="position-relative">
+                <img
+                  src=" https://b.zmtcdn.com/data/pictures/6/18758906/ba96db7b5b0892558fc7ed4f3baed6eb_featured_v2.jpg"
+                  class="card-img-top rounded-top-4" alt="Little Italy">
+                <span
+                  class="position-absolute top-0 start-0 bg-secondary text-white px-2 py-1 small rounded-bottom-end">
+                </span>
+                <span class="position-absolute bottom-0 start-0 bg-primary text-white px-2 py-1 small rounded-top-end">
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">Lush House
+ 
+                </h5>
+                <p class="mb-1 text-muted small">Continental, Italian, Beverages, Desserts, Healthy Food, Shake, Coffee,
+                  Pizza</p>
+                <div class="d-flex justify-content-between align-items-center small">
+                  <span class="fw-bold text-muted">₹800 for two</span>
+                  <span class="badge bg-success">4.5★</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1 text-muted small">
+                  <span>Bajaj Nagar, Nagpur</span>
+                  <span>1.5 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <footer class="bg-light text-dark pt-5">
+        <div class="container">
+          <div class="row">
+
+
+            <div class="col-md-3 mb-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" alt="Zomato Logo"
+                width="120">
+            </div>
+
+
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-bold">ABOUT ZOMATO</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">Who We Are</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Blog</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Work With Us</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Investor Relations</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Report Fraud</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Press Kit</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+              </ul>
+            </div>
+
+
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-bold">ZOMAVERSE</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">Zomato</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Blinkit</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">District</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Feeding India</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Hyperpure</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Zomato Live</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Zomaland</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Weather Union</a></li>
+              </ul>
+            </div>
+
+
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-bold">FOR RESTAURANTS</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">Partner With Us</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Apps For You</a></li>
+              </ul>
+            </div>
+
+
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-bold">LEARN MORE</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-decoration-none text-dark">Privacy</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Security</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Terms</a></li>
+              </ul>
+            </div>
+
+
+            <div class="col-md-1 mb-4">
+              <h6 class="fw-bold">SOCIAL</h6>
+              <div class="d-flex flex-column">
+                <a href="#" class="mb-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="mb-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="mb-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="mb-2"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="mb-2"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="150"
+                class="me-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="150">
+            </div>
+
+            <div class="col-md-6 text-end">
+              <p class="small text-muted">© 2008-2025 Zomato™ Ltd. All rights reserved.</p>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+
+
+</body>
+
+</html>
